@@ -26,8 +26,8 @@ public class DriverUtility {
 		if(browser.equalsIgnoreCase("chrome")) {
 			ChromeOptions options = new ChromeOptions();
 			
-			 DesiredCapabilities caps = new DesiredCapabilities();
-		        caps.setBrowserName("chrome");
+			//DesiredCapabilities caps = new DesiredCapabilities();
+		    //caps.setBrowserName("chrome");
 			
             //options.addArguments("--disable-notifications");
             options.addArguments("--start-maximized");
@@ -43,8 +43,8 @@ public class DriverUtility {
             //options.setBinary("C:\\Users\\pramod.a.ramesh\\Downloads\\chrome-win64\\chrome.exe");
             options.addArguments("--headless");						
 			//WebDriverManager.chromedriver().setup();
-            //driver = new ChromeDriver(options);
-            driver = new RemoteWebDriver(new URL("http://44.211.77.23:4444/wd/hub"), caps);
+            driver = new ChromeDriver(options);
+            //driver = new RemoteWebDriver(new URL("http://44.211.77.23:4444/wd/hub"), caps);
             return driver;
 			}
 		
