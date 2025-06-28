@@ -1,6 +1,8 @@
 package mainPackage;
 
 import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -8,6 +10,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverUtility {
@@ -20,6 +25,9 @@ public class DriverUtility {
 	public WebDriver getDriver(String browser) throws MalformedURLException {
 		if(browser.equalsIgnoreCase("chrome")) {
 			ChromeOptions options = new ChromeOptions();
+			
+			 DesiredCapabilities caps = new DesiredCapabilities();
+		        caps.setBrowserName("chrome");
 			
             //options.addArguments("--disable-notifications");
             options.addArguments("--start-maximized");
@@ -35,7 +43,8 @@ public class DriverUtility {
             //options.setBinary("C:\\Users\\pramod.a.ramesh\\Downloads\\chrome-win64\\chrome.exe");
             options.addArguments("--headless");						
 			//WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver(options);
+            //driver = new ChromeDriver(options);
+            driver = new RemoteWebDriver(new URL("http://44.211.77.23:4444/wd/hub"), caps);
             return driver;
 			}
 		
