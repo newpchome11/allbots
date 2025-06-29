@@ -29,8 +29,7 @@ ENV PATH=$MAVEN_HOME/bin:$PATH
 RUN mvn -version
 
 #chromedriver download and making it executable
-RUN VERSION=$(google-chrome --version | sed 's/[^0-9]*//g') && \
-    wget https://chromedriver.storage.googleapis.com/${VERSION}/chromedriver_linux64.zip && \
+RUN wget https://storage.googleapis.com/chrome-for-testing-public/138.0.7204.49/linux64/chromedriver-linux64.zip && \
     unzip chromedriver_linux64.zip && \
     chmod +x chromedriver && \
     mv chromedriver /usr/local/bin/
