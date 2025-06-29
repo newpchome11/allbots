@@ -11,9 +11,9 @@ USER root
 COPY . .
 
 # Install necessary dependencies (wget and unzip)
-RUN apt-get update 
-	 wget \
-	 unzip
+RUN apt-get update && apt-get install -y \
+    wget \
+    unzip
 
 # Download and install Maven 
 RUN wget https://dlcdn.apache.org/maven/maven-3/3.9.10/binaries/apache-maven-3.9.10-bin.tar.gz \
