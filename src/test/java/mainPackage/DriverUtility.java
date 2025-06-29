@@ -37,7 +37,7 @@ public class DriverUtility {
 			//options.addArguments("--no-sandbox");
             //options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
             //options.setExperimentalOption("useAutomationExtension", false);
-            //System.setProperty("webdriver.chrome.driver",Baseclass.prop.getProperty("chromeDriver"));
+            System.setProperty("webdriver.chrome.driver","./Resource/chromedriver");
 			//System.setProperty("webdriver.chrome.driver",UITesting.prop.getProperty("chromeDriver"));
             
             //options.setBinary("C:\\Users\\pramod.a.ramesh\\Downloads\\chrome-win64\\chrome.exe");
