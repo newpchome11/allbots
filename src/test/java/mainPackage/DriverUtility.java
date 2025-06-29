@@ -41,7 +41,7 @@ public class DriverUtility {
 			//System.setProperty("webdriver.chrome.driver",UITesting.prop.getProperty("chromeDriver"));
             
             //options.setBinary("C:\\Users\\pramod.a.ramesh\\Downloads\\chrome-win64\\chrome.exe");
-            options.addArguments("--headless");						
+            options.addArguments("--headless");					
 			//WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver(options);
             //driver = new RemoteWebDriver(new URL("http://44.211.77.23:4444/wd/hub"), caps);
