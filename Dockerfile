@@ -28,4 +28,11 @@ ENV PATH=$MAVEN_HOME/bin:$PATH
 # Verify Maven installation
 RUN mvn -version
 
+#chromedriver download and making it executable
+RUN VERSION=$(google-chrome --version | sed 's/[^0-9]*//g') && \
+    wget https://chromedriver.storage.googleapis.com/${VERSION}/chromedriver_linux64.zip && \
+    unzip chromedriver_linux64.zip && \
+    chmod +x chromedriver && \
+    mv chromedriver /usr/local/bin/
+
 CMD ["mvn", "test"]
