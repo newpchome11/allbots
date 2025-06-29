@@ -31,7 +31,7 @@ RUN mvn -version
 #chromedriver download and making it executable
 RUN wget https://storage.googleapis.com/chrome-for-testing-public/138.0.7204.49/linux64/chromedriver-linux64.zip && \
     unzip chromedriver-linux64.zip && \
-	cd chromedriver-linux64
+	cd chromedriver-linux64 && \
     chmod +x chromedriver && \
     mv chromedriver /usr/local/bin/
 
