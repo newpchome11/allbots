@@ -13,4 +13,4 @@ COPY --from=builder /build/target/*.jar selenium-tests.jar
 COPY testng.xml .
 COPY src/test/resources /opt/selenium-tests/resources
 
-CMD ["java", "-cp", "selenium-tests.jar:resources", "org.testng.TestNG", "testng.xml"]
+CMD ["java", "-cp", "selenium-tests.jar:resources", "mainPackage.TestNGRunner"]
