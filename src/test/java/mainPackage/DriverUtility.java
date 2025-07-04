@@ -43,8 +43,8 @@ public class DriverUtility {
             //options.setBinary("C:\\Users\\pramod.a.ramesh\\Downloads\\chrome-win64\\chrome.exe");
             options.addArguments("--headless");					
 			//WebDriverManager.chromedriver().setup();
-            //driver = new ChromeDriver(options);
-            driver = new RemoteWebDriver(new URL("http://13.218.121.197:4444/wd/hub"), caps);
+            driver = new ChromeDriver(options);
+            //driver = new RemoteWebDriver(new URL("http://13.218.121.197:4444/wd/hub"), caps);
             return driver;
 			}
 		
