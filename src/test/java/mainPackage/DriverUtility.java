@@ -44,7 +44,7 @@ public class DriverUtility {
             options.addArguments("--headless");					
 			//WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver(options);
-            //driver = new RemoteWebDriver(new URL("http://13.218.121.197:4444/wd/hub"), caps);
+            //driver = new RemoteWebDriver(new URL("http://44.202.134.55:4444/wd/hub"), caps);
             return driver;
 			}
 		
