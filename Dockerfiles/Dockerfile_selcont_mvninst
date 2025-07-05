@@ -34,5 +34,3 @@ RUN wget https://storage.googleapis.com/chrome-for-testing-public/137.0.7151.68/
 	cd chromedriver-linux64 && \
     chmod +x chromedriver && \
     mv chromedriver /usr/local/bin/
-
-RUN mvn clean test
