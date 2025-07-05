@@ -35,4 +35,4 @@ RUN wget https://storage.googleapis.com/chrome-for-testing-public/137.0.7151.68/
     chmod +x chromedriver && \
     mv chromedriver /usr/local/bin/
 
-CMD ["mvn", "test"]
+RUN mvn clean test
